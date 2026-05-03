@@ -1,0 +1,268 @@
+
+:root {
+  --bg-light: #ffffff;
+  --text-light: #1a1a1a;
+  --bg-dark: #1a1a1a;
+  --text-dark: #ffffff;
+  --primary-color: #3b82f6;
+  --accent-color: #6b7280;
+  --header-dark: #000000;
+  --header-light: #f0f0f0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.light-mode .settings-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+body.light-mode header {
+  background: var(--header-light);
+  color: var(--text-light);
+}
+
+header {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header-dark);
+  color: white;
+  font-size: 1.5rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+}
+
+.settings-btn {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 1rem 1rem;
+  max-height: 250px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.speechanddebate.org/wp-content/uploads/Final-Roundsv2.jpg') center/cover no-repeat;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 4px black;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 4px black;
+  color: dodgerblue;
+}
+
+.cta-button {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.section {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: var(--accent-color);
+}
+
+.favicon-img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  header {
+    padding: 1rem;
+    font-size: 1.2rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-center {
+    position: static;
+    transform: none;
+    order: -1;
+    text-align: center;
+  }
+
+  .header-left {
+    order: 0;
+    justify-content: center;
+  }
+
+  .settings-btn {
+    order: 1;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+    font-size: 1.2rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-center {
+    margin-left: 0;
+    order: -1;
+  }
+
+  .header-left {
+    order: 0;
+    justify-content: center;
+  }
+
+  .settings-btn {
+    order: 1;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    align-self: center;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+    max-height: 200px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section p, .section li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+.dropdown-item {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+body:not(.light-mode) .dropdown-item:hover {
+  background-color: #444;
+}
+
+.dropdown-item i {
+  margin-right: 8px;
+  width: 16px;
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
