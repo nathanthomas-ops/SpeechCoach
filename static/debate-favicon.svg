@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="16" fill="#0066cc"/>
+  
+  <!-- Italic T in white -->
+  <path d="M6 8h16l-1 3H15l-3 13h-3l3-13H6V8z" fill="white"/>
+  
+  <!-- Plus sign, moved right -->
+  <path d="M24 13v3h3v2h-3v3h-2v-3h-3v-2h3v-3z" fill="white"/>
+</svg>

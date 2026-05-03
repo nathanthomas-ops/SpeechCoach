@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJMNCG140L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YJMNCG140L');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TabroomPlus</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='debate-favicon.svg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='homestyle.css') }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <a href="/">
+        <img src="{{ url_for('static', filename='debate-favicon.svg') }}" alt="Favicon" class="favicon-img" />
+      </a>
+    </div>
+    <div class="header-center">TabroomPlus</div>
+    <button class="settings-btn" onclick="toggleMode()">
+      <i class="fa-solid fa-circle-half-stroke"></i> Theme
+    </button>
+  </header>
+
+  <section class="hero">
+    <h1>Instantly Analyze Speech and Debate Judge Comments</h1>
+    <p>Use AI to turn judge feedback into clear, actionable advice.</p>
+    <a href="/login">
+      <button class="cta-button" onclick="document.getElementById('try').scrollIntoView({behavior: 'smooth'})">
+        Try TabroomPlus — It’s Free!
+      </button>
+    </a>
+  </section>
+
+  <section class="section">
+    <h2>What is TabroomPlus?</h2>
+    <p>TabroomPlus helps speech and debate students and coaches make the most of judge feedback. Simply log in with your Tabroom credentials and let AI do the rest.</p>
+  </section>
+
+  <section class="section">
+    <h2>How It Works</h2>
+    <ol>
+      <li><strong>Upload Feedback:</strong> Connect your Tabroom account and choose a tournament.</li>
+      <li><strong>AI Analysis:</strong> We extract and interpret judge comments with LLMs.</li>
+      <li><strong>Get Recommendations:</strong> Receive delivery, strategy, and script improvement tips.</li>
+    </ol>
+  </section>
+
+  <section class="section" id="try">
+    <h2>Try TabroomPlus</h2>
+    <p>It’s free and secure. Your username and password are safely handled.</p>
+    <a href="/login">
+      <button class="cta-button">Launch TabroomPlus Now</button>
+    </a>
+  </section>
+
+  <footer>
+    &copy; 2025 TabroomPlus | Not affiliated with NSDA or Tabroom
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+</body>
+</html>
